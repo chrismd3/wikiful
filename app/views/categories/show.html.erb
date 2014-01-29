@@ -1,0 +1,13 @@
+<div>
+  
+  <h1><%= @category.name %></h1>
+  <p>Created <%= @category.created_at.strftime('%b %d, %Y') %></p>
+  <p>This category contains the following articles: 
+    <ul>
+      <% @category.articles.each do |article| %>
+        <li><%= link_to article.title, article %>&nbsp;</li>
+      <% end %>
+    </ul>
+  </p>
+  
+</div>

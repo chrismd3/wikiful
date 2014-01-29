@@ -1,0 +1,11 @@
+<h1>All Categories:</h1>
+<% @categories.each do |category| %>
+<div onclick="window.location='/categories/<%= category.id %>'">
+    <h3><%= link_to category.name, category %></h3>
+    <p>Created on: <%= category.created_at.strftime('%b %d, %Y') %></p>
+    <p>This category contains the following articles: <% category.articles.each do |article| %>
+      <%= article.title %>&nbsp;
+      <%end%>
+    </p>
+  </div>
+<%end%>

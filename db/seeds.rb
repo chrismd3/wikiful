@@ -14,7 +14,7 @@ categories = Category.create([
 
 for i in 0..49
   title = Faker::Lorem.sentence(rand(2..10)).chomp('.')
-  content = Faker::Lorem.paragraph(word_count=250)
+  content = Faker::Lorem.paragraph(word_count=150)
   
   category = Category.first(offset: rand(Category.count))
   a = Article.create(title: title, content: content, categories: [category])

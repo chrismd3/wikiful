@@ -23,7 +23,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.submit nil %>
-    <%= link_to 'Cancel', articles_path%>
+    <%= f.submit "Save", :class => "btn" %>
+    <%= link_to 'Cancel', articles_path, :class => "btn btn-warning" %>
   </div>
 <% end %>

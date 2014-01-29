@@ -1,0 +1,10 @@
+<div class="span3">
+  <div class="well sidebar-nav">
+    <h3>Categories</h3>    
+    <ul class="nav nav-list">
+      <% Category.all.order(name: :asc).each do |category| %>
+          <li><%= link_to category.name, category  %></li>
+      <% end %>
+    </ul>
+  </div><!--/.well -->
+</div><!--/span-->
